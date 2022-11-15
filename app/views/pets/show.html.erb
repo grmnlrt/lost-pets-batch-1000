@@ -1,0 +1,11 @@
+<h1><%= @pet.name %></h1>
+
+<ul>
+  <li>Found at: <%= @pet.address %></li>
+  <li>Found on: <%= @pet.found_on %></li>
+  <li>Species: <%= @pet.species %></li>
+</ul>
+
+<p>
+  <%= link_to "Delete pet", pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+</p>
